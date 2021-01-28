@@ -1,5 +1,5 @@
-# Hyperpixel 4.0 touch and Raspberry Pi 4B case (with Prusa MK3S bracket)
-This project provides a 3D printable case for the Hyperpixel 4.0 touch display and Raspberry Pi 4 B.  The case features a universal mounting system; a bracket for the Prusa i3 MK3S/MMU2S is also provided.
+# Hyperpixel 4.0 touch and Raspberry Pi B case (with Prusa MK3S bracket)
+This project provides a 3D printable case for the Hyperpixel 4.0 touch display and Raspberry Pi 4 B, or Raspberry Pi 2/3 B.  The case features a universal mounting system; a bracket for the Prusa i3 MK3S/MMU2S is also provided.
 
 Note: This project is GPLv3 open-source. The github repository for the model (containing the complete OpenSCAD project) can be found at https://github.com/simoninns/hyperpixel-raspi4b-case
 
@@ -85,6 +85,7 @@ The OpenSCAD source files provide a parameter interface that allows you to rende
 # Author
 
 The Hyperpixel 4.0 touch and Raspberry Pi 4B case is designed and maintained by Simon Inns.
+This fork adds Raspberry Pi 2/3 support and was modified by Nathan Dumont.
 
 # Licensing
 
