@@ -1,0 +1,3 @@
+[submodule "scad/openscad-rpi-library"]
+	path = scad/openscad-rpi-library
+	url = https://github.com/RigacciOrg/openscad-rpi-library

@@ -23,6 +23,7 @@
 ************************************************************************/
 
 include <./rasppi4b/rasppi4b.scad>
+include <./openscad-rpi-library/misc_boards.scad>
 include <./hyperpixel/hyperpixel.scad>
 include <case.scad>
 include <prusa_mk3s_bracket.scad>
@@ -32,9 +33,11 @@ include <desk_stand.scad>
 $fn = 20;
 
 // Choose what to display:
+pi_version = 3; // [3, 4]
 display_upper_case = "Yes"; // [Yes, No]
 display_lower_case = "Yes"; // [Yes, No]
-display_pi4 = "Yes"; // [Yes, No]
+display_pi4 = "No"; // [Yes, No]
+display_pi3 = "Yes"; // [Yes, No]
 display_hyperpixel = "Yes"; // [Yes, No]
 display_prusa_bracket = "Yes"; // [Yes, No]
 display_desk_stand = "2"; // [0, 1, 2]
@@ -44,16 +47,17 @@ lift_upper_case = "Yes"; // [Yes, No]
 
 // Render the Raspberry Pi 4B board
 if (display_pi4 == "Yes") rasppi4b();
+if (display_pi3 == "Yes") translate([0,56]) rotate([0,0,-90]) board_raspberrypi_3_model_b();
 
 // Render the Hyperpixel 4.0 display
 if (display_hyperpixel == "Yes") hyperpixel();
 
 // Render the lower case
-if (display_lower_case == "Yes") lower_case();
+if (display_lower_case == "Yes") lower_case(ver=pi_version);
 
 // Render the upper case
 lift = (lift_upper_case == "Yes") ? 30:0;
-if (display_upper_case == "Yes") upper_case(lift);
+if (display_upper_case == "Yes") upper_case(lift, ver=pi_version);
 
 // Render the Prusa MK3S bracket
 if (display_prusa_bracket == "Yes") prusa_mk3s_bracket();
